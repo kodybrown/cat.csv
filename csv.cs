@@ -32,6 +32,9 @@ namespace cat.csv
 {
 	public class csv : ICataloger
 	{
+		public string Description { get { return _description; } }
+		private string _description = "Output formatted comma-separated values (csv).";
+
 		public bool CanCat( CatOptions catOptions, string fileName )
 		{
 			return Path.GetExtension(fileName).Equals(".csv", StringComparison.CurrentCultureIgnoreCase);
@@ -94,9 +97,11 @@ namespace cat.csv
 				for (int c = 0; c < ls.Length; c++) {
 					//res.AppendFormat("{0,-" + maxLen[c] + "}, ", ls[c]);
 					//res.AppendFormat("{0,-" + maxLen[c] + "} ", ls[c] + ",");
-					res.AppendFormat("{0,-" + maxLen[c] + "}, ", ls[c]);
+					res.AppendFormat("{0,-" + maxLen[c] + "}, ", ls[c].TrimStart());
 				}
+
 				Console.WriteLine(res.ToString().TrimEnd(' ', ','));
+				//Console.WriteLine(res.ToString().TrimEnd().TrimEnd(','));
 			}
 
 			return true;
