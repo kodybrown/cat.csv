@@ -1,4 +1,4 @@
-cat.csv
-=======
+cat.delimited
+=============
 
-csv (comma separated values) driver for cat.exe
+A delimited file driver for cat.exe/ Currently supported is csv (comma separated values) and TAB files.
