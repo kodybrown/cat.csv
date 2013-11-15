@@ -6,8 +6,8 @@
     <ProjectGuid>{63FE1513-B06A-4D5D-B814-FC5EF155BE3C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>cat.csv</RootNamespace>
-    <AssemblyName>cat.csv</AssemblyName>
+    <RootNamespace>cat.delimited</RootNamespace>
+    <AssemblyName>cat.delimited</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="tab.cs" />
     <Compile Include="csv.cs" />
     <Compile Include="DelimitedFile.Type.cs" />
     <Compile Include="DelimitedFileReader.cs" />
@@ -51,7 +52,8 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
   <PropertyGroup>
-    <PostBuildEvent>if exist "%25UserProfile%25\Root\$(TargetFileName)" xcopy "$(TargetPath)" "%25UserProfile%25\Root" /y</PostBuildEvent>
+    <PostBuildEvent>if exist "%25UserProfile%25\Root\$(TargetFileName)" xcopy "$(TargetPath)" "%25UserProfile%25\Root" /y
+if exist "$(SolutionDir)\Bin" xcopy "$(TargetPath)" "$(SolutionDir)\Bin" /y</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Label="Versioning">
     <VersioningMajor>0</VersioningMajor>

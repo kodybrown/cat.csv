@@ -28,12 +28,12 @@ using System.IO;
 using System.Text;
 using Bricksoft.PowerCode;
 
-namespace cat.csv
+namespace cat.delimited
 {
 	public class csv : ICataloger
 	{
 		public string Description { get { return _description; } }
-		private string _description = "Output formatted comma-separated values (csv).";
+		private string _description = "Formatted comma-separated values (.csv).";
 
 		public bool CanCat( CatOptions catOptions, string fileName )
 		{
@@ -47,6 +47,7 @@ namespace cat.csv
 
 		public bool Cat( CatOptions catOptions, string fileName, int lineStart, long linesToWrite )
 		{
+			string ext = Path.GetExtension(fileName);
 			string[] lines;
 			Dictionary<int, int> maxLen = new Dictionary<int, int>();
 			List<string[]> lineColumns = new List<string[]>();
@@ -65,7 +66,7 @@ namespace cat.csv
 			colPad = string.Empty;
 
 			DelimitedFileReader f = new DelimitedFileReader();
-			f.OpenFile(fileName, new FileType("csv", ",", new string[] { ".csv" }, "csv"));
+			f.OpenFile(fileName, new FileType(ext.Substring(1), ",", new string[] { ext }, ext.Substring(1)));
 
 			// Get the maxlength of each column.
 			for (int i = Math.Min(lines.Length, Math.Max(0, lineStart)); i < Math.Min(lineStart + linesToWrite, lines.Length); i++) {
