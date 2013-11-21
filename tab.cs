@@ -32,6 +32,9 @@ namespace cat.delimited
 {
 	public class tab : ICataloger
 	{
+		public string Name { get { return _name; } }
+		private string _name = "tab";
+
 		public string Description { get { return _description; } }
 		private string _description = "Formatted tab-separated files (.tab).";
 

@@ -32,6 +32,9 @@ namespace cat.delimited
 {
 	public class csv : ICataloger
 	{
+		public string Name { get { return _name; } }
+		private string _name = "csv";
+
 		public string Description { get { return _description; } }
 		private string _description = "Formatted comma-separated values (.csv).";
 
