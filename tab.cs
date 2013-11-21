@@ -23,10 +23,7 @@
 //
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using Bricksoft.PowerCode;
 
 namespace cat.delimited
 {

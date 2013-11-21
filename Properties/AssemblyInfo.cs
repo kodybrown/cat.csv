@@ -8,14 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Reflection.AssemblyTitle("cat.csv ver:0.9.31121.6")]
+[assembly: System.Reflection.AssemblyTitle("cat.csv ver:0.9.31121.7")]
 [assembly: System.Reflection.AssemblyDescription("cat.csv")]
 [assembly: System.Reflection.AssemblyProduct("cat.csv")]
 [assembly: System.Reflection.AssemblyCopyright("Copyright (C) 2003-2013 Kody Brown.")]
 [assembly: System.Runtime.InteropServices.ComVisible(false)]
 [assembly: System.CLSCompliant(false)]
 [assembly: System.Runtime.InteropServices.Guid("63FE1513-B06A-4D5D-B814-FC5EF155BE3C")]
-[assembly: System.Reflection.AssemblyVersion("0.9.31121.6")]
-[assembly: System.Reflection.AssemblyFileVersion("0.9.31121.6")]
+[assembly: System.Reflection.AssemblyVersion("0.9.31121.7")]
+[assembly: System.Reflection.AssemblyFileVersion("0.9.31121.7")]
 
 
